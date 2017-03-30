@@ -1,24 +1,22 @@
-Motivateme#index
-<%= link_to "Create new challenge", new_task_path %>
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
-      <td> Name </td>
-      <td> Description </td>
-      <td> Creator </td>
-      <td> Motivator </td>
-      <td> Credit </td>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Creator</th>
+      <th>Motivator</th>
+      <th>Credit</th>
     </tr>
   </thead>
   <tbody>
-    <% @tasks.each do |task| %>
-      <tr>
+		<% @tasks.each do |task| %>
+			<tr>
         <td><%= task.name %></td>
         <td><%= task.description %></td>
         <td><%= task.creator %></td>
         <td><%= task.motivator %></td>
         <td><%= task.credit %></td>
-      </tr>
-    <% end %>
+			</tr>
+		<% end %>
   </tbody>
 </table>

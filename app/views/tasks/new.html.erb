@@ -1,24 +1,2 @@
-New Task
-<%= form_for @task, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-	<div>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-	</div>
-	<div>
-		<%= f.label :description %>
-		<%= f.text_area :description, size: "60x12" %>
-	</div>
-	<div>
-		<%= f.label :creator %>
-		<%= f.text_field :creator %>
-	</div>
-	<div>
-		<%= f.label :motivator %>
-		<%= f.text_field :motivator %>
-	</div>
-	<div>
-		<%= f.label :credit %>
-		<%= f.text_field :credit %>
-	</div>
-  <%= f.submit "Create" %>
-<% end %>
+<h1> New Task </h1>
+<%= render "form", {task: @task, action: "create"} %>
